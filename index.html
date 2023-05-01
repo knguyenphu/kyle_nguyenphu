@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Kyle Nguyenphu</title>
+    <style>
+      body {
+        background-color: black;
+        color: white;
+        font-family: Consolas, monospace;
+        font-size: 16px;
+      }
+      #console {
+        height: 95vh;
+        width: 100%;
+        box-sizing: border-box;
+        overflow: auto;
+        border: 1px solid white;
+        padding: 10px;
+        background-color: black;
+        color: white;
+        font-family: Consolas, monospace;
+        font-size: 16px;
+      }
+      #input-wrapper {
+        display: flex;
+        align-items: center;
+        position: relative;
+      }
+      #prefix {
+        margin-right: 5px;
+      }
+      #input {
+        border: none;
+        background-color: black;
+        color: white;
+        font-family: Consolas, monospace;
+        font-size: 16px;
+        flex: 1;
+        margin: 0;
+        padding: 0;
+        outline: none;
+        position: relative;
+        left: -5px;
+      }
+      #input:focus {
+        left: 0;
+      }
+
+
+
+    </style>
+  </head>
+  <body>
+    <div id="console">
+      <div id="console-text"></div>
+      <div id="input-wrapper">
+        <span id="prefix">C:\Users\kyle_nguyenphu&gt;</span>
+        <input id="input" type="text" autofocus>
+      </div>
+    </div>
+    <script>
+      const consoleTextDiv = document.getElementById("console-text");
+      const input = document.getElementById("input");
+      const prefix = document.getElementById("prefix");
+
+      const logToConsole = (text) => {
+        consoleTextDiv.innerHTML += text + "<br>";
+        consoleTextDiv.scrollTop = consoleTextDiv.scrollHeight;
+      };
+
+      input.addEventListener("keydown", (event) => {
+        if (event.key === "Enter") {
+          const command = input.value;
+          logToConsole(prefix.innerHTML + " " + command);
+
+          switch (command) {
+            case "Profile","profile":
+              logToConsole("");
+            
+              const img = document.createElement("img");
+              img.src = "https://drive.google.com/uc?export=view&id=1Eivg3ypsHzVtk2aL_XWdfhLudExS4rzb";
+              img.width = "213.666666667"; 
+              img.height = "231.44444444";
+              img.classList.add("console-image");
+              consoleTextDiv.appendChild(img);
+
+              logToConsole("");
+
+              logToConsole("Kyle Nguyenphu is a driven and ambitious student pursuing a degree in engineering")
+              logToConsole("at Texas A&M University, College Station. With a passion for computer science, Kyle");
+              logToConsole("has consistently sought out opportunities to develop his skills and knowledge in");
+              logToConsole("this area through personal and team projects with knowledge of various programming");
+              logToConsole("languages.");
+
+              logToConsole("");
+              break;
+            case "Resume","resume":
+              logToConsole("");
+              logToConsole("Education:");
+              logToConsole("~ Texas A&M University - Undergraduate");
+              logToConsole("- Fall 2022 - Present");
+              logToConsole("- General Engineering");
+              logToConsole("");
+              logToConsole("Activities:");
+              logToConsole("~ Allen Varsity Golf - Team Captain");
+              logToConsole("- Fall 2019 - Spring 2022");
+              logToConsole("- Communication with all players and coaches");
+              logToConsole("- Organizing and operating team meetings and practice");
+              logToConsole("- Team management");
+              logToConsole("");
+              logToConsole("Work Experience:");
+              logToConsole("~ The First Tee - Volunteer golf mentor");
+              logToConsole("- June 2017 - July 2022");
+              logToConsole("- Worked with Children to establish core values in life");
+              logToConsole("- Volunteer Golf Instructor for Children");
+              logToConsole("- Worked with peers to manage golf tournaments for underprivileged.");
+              logToConsole("");
+              logToConsole("Skills:");
+              logToConsole("- Communication");
+              logToConsole("- Leadership");
+              logToConsole("- Responsibility");
+              logToConsole("- Python");
+              logToConsole("- html");
+              logToConsole("- css");
+              logToConsole("- java");
+              logToConsole("- selenium package");
+              logToConsole("- python requests package");
+              logToConsole("");
+              break;
+            case "Projects","projects":
+              logToConsole("");
+
+              logToConsole("TAMU Hack:");
+              logToConsole("- Created a proof of concept user interface through figma that enhances the inflight experience for the American Airline's");
+              logToConsole("customer. This concept added the ability to requests services from the app such that if it were a late night flight, a beverage");
+              logToConsole("cart attendant wouldn't disturb customers that are sleeping.");
+              logToConsole("- This was a solo project and with the short time frame to finish, I couldn't produce a programmed working form.");
+              logToConsole("- Skills used: web design.");
+              logToConsole("");
+              logToConsole("Pokemon Game:");
+              logToConsole("- My team had created a game that uses object orientated programming to mimic the Pokemon Game using a query of pokemon and");
+              logToConsole("their statistics. It used a system that was able to store existing player data as well as load player data.");
+              logToConsole("- Skills used: python.");
+              logToConsole("");
+              logToConsole("Lululemon webscrape:");
+              logToConsole("- This project was to solve a problem that my friend had when purchasing lululemon sale items. Many new items would be added although");
+              logToConsole("it sells out extremely fast.");
+              logToConsole("- I created an app that is able to log all of the available items on the sale page alongside their colors that are available. It can also");
+              logToConsole("be used to check when an item is back in stock. The primary purpose is to detect when a difference to the list of items is detected by comparing");
+              logToConsole("the logs from the log before it.");
+              logToConsole("- One of the core problems tackled in this challenge is the infinite scroll technique used by lululemon that prevents webscrapers from parsing");
+              logToConsole("the page. The way I was able to go around this countermeasure is to add a human like scroll that would move down to slowly add the items. Once");
+              logToConsole("all the items had been loaded, I was able to scrape all that data at once.");
+              logToConsole("- Skills used: python, selenium.");
+              logToConsole("");
+              logToConsole("Panda Express Script:");
+              logToConsole("- This project used web automation to complete a survey to receive the free item given for completion. It completed the survey and printed a");
+              logToConsole("code to redeem as well as sent an email to an inbox.");
+              logToConsole("- Skills used: python, selenium.");
+              logToConsole("");
+              logToConsole("Aggie Schedule Builder Script:");
+              logToConsole("- This project used a login flow script that automated login through micrsoft authentication and scraped a course webpage that notified if");
+              logToConsole("a class is open.");
+              logToConsole("- Skills used: python, selenium");
+              logToConsole("");
+              break;
+            case "Contact","contact":
+              logToConsole("");
+              logToConsole("Email - knguyenphu@gmail.com");
+              logToConsole("");
+              break;
+            default:
+              logToConsole(`'${command}' is not recognized as an internal or external command,`);
+              logToConsole('operable program or batch file.');
+              logToConsole('');
+ 
+              break;
+          }
+
+          input.value = "";
+        }
+      });
+
+      logToConsole("Microsoft Windows [Version 10.0.19042.867]");
+      logToConsole("(c) Microsoft Corporation. All rights reserved.");
+      logToConsole("");
+      logToConsole("Commands:");
+      logToConsole("-profile");
+      logToConsole("-resume");
+      logToConsole("-projects");
+      logToConsole("-contact");
+      logToConsole("");
+    </script>
+  </body>
+</html>
