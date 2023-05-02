@@ -45,9 +45,6 @@
       #input:focus {
         left: 0;
       }
-
-
-
     </style>
   </head>
   <body>
@@ -62,7 +59,6 @@
       const consoleTextDiv = document.getElementById("console-text");
       const input = document.getElementById("input");
       const prefix = document.getElementById("prefix");
-
       const logToConsole = (text) => {
         consoleTextDiv.innerHTML += text + "<br>";
         consoleTextDiv.scrollTop = consoleTextDiv.scrollHeight;
@@ -76,22 +72,18 @@
           switch (command) {
             case "Profile","profile":
               logToConsole("");
-            
               const img = document.createElement("img");
               img.src = "https://drive.google.com/uc?export=view&id=1Eivg3ypsHzVtk2aL_XWdfhLudExS4rzb";
               img.width = "213.666666667"; 
               img.height = "231.44444444";
               img.classList.add("console-image");
               consoleTextDiv.appendChild(img);
-
               logToConsole("");
-
               logToConsole("Kyle Nguyenphu is a driven and ambitious student pursuing a degree in engineering")
               logToConsole("at Texas A&M University, College Station. With a passion for computer science, Kyle");
               logToConsole("has consistently sought out opportunities to develop his skills and knowledge in");
               logToConsole("this area through personal and team projects with knowledge of various programming");
               logToConsole("languages.");
-
               logToConsole("");
               break;
             case "Resume","resume":
@@ -129,7 +121,6 @@
               break;
             case "Projects","projects":
               logToConsole("");
-
               logToConsole("TAMU Hack:");
               logToConsole("- Created a proof of concept user interface through figma that enhances the inflight experience for the American Airline's");
               logToConsole("customer. This concept added the ability to requests services from the app such that if it were a late night flight, a beverage");
@@ -182,8 +173,7 @@
           input.value = "";
         }
       });
-
-      logToConsole("Microsoft Windows [Version 10.0.19042.867]");
+      logToConsole("Microsoft Windows [Version 10.0.22000.1696]");
       logToConsole("(c) Microsoft Corporation. All rights reserved.");
       logToConsole("");
       logToConsole("Commands:");
